@@ -51,6 +51,12 @@ while not usuario_quer_sair:
                 usuario1 = input('> ')
             print('\nEscolha o nome do segundo usuário')
             usuario2 = input('> ')
+    
+            while usuario2 == usuario1:
+                print("\nEscolha um nome diferente do usuário 1")
+                usuario2 = input('> ')
+                continue
+    
             while usuario2 not in rede.buscar_todos_usuarios():
                 print("\nUsuário não existe na árvore")
                 usuario2 = input('> ')
